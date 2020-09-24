@@ -804,7 +804,7 @@ bool CFundamentalnodePing::CheckAndUpdate(int& nDos, bool fRequireEnabled, bool 
     // see if we have this Fundamentalnode
     CFundamentalnode* pmn = mnodeman.Find(vin);
     if (pmn != NULL && pmn->protocolVersion >= fundamentalnodePayments.GetMinFundamentalnodePaymentsProto()) {
-        if (fRequireEnabled && !pmn->IsEnabled()) return false;
+        //if (fRequireEnabled && !pmn->IsEnabled()) return false;
 
         // LogPrint("fundamentalnode","mnping - Found corresponding mn for vin: %s\n", vin.ToString());
         // update only if there is no known ping for this fundamentalnode or
